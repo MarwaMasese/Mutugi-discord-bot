@@ -9,10 +9,10 @@ def home():
 
 @app.route('/dashboard')
 def dashboard():
-    return render_template('dashboard.html')
+    return render_template('dashboard/html/index.html')
 
-client_id = "ASz3AXD_6Q63F1PnF2wKdAWexYWazAJ8LPHf5Zgsds0RPdCZekUhz4pR1iHRANSMiQVKnihFSHe-GRoE"
-client_secret= "ECATlILYJZ4Gkui5QYtkJgaTIVPp-yylrwUijWU4tgIGmNZtXCz0wbBRFHlGiX20jM6fRMJr5J1SHwfj"
+client_id = ""
+client_secret= ""
 
 # Configure PayPal
 paypalrestsdk.configure({
@@ -58,8 +58,6 @@ def pay():
 
 # Add additional routes for payment execution and cancellation if needed
 
-if __name__ == "__main__":
-    app.run(debug=True)
 
 if __name__ == '__main__':
     app.run(debug=True)
