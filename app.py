@@ -11,6 +11,10 @@ def home():
 def dashboard():
     return render_template('dashboard/html/index.html')
 
+@app.route('/sucess')
+def sucess():
+    return "Payment was successfull"
+
 client_id = ""
 client_secret= ""
 
@@ -28,7 +32,7 @@ def pay():
         "payer": {
             "payment_method": "paypal"},
         "redirect_urls": {
-            "return_url": "http://localhost:5000/payment/execute",
+            "return_url": "http://localhost:5000/success",
             "cancel_url": "http://localhost:5000/"},
         "transactions": [{
             "item_list": {
